@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+       <property name="url" value="jdbc:mysql://39.108.76.139:3306/CourseSystem?serverTimezone=UTC&amp;autoReconnect=true "/>
+        <property name="username" value="CourseSystem"/>
+        <property name="password" value="mysqllandup"/>
+        <property name="poolPingEnabled" value="true"/>
+        <property name="poolPingQuery" value="select stuID from students limit 1"/>
+        <property name="poolPingConnectionsNotUsedFor" value="3600000"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <package name ="com.edu_management.mapper"></package>
+  </mappers>
+</configuration>
